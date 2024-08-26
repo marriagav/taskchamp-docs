@@ -19,7 +19,7 @@ To install Taskchamp, download the latest release from the App Store.
 To setup Taskchamp with Taskwarrior, follow these steps:
 
 1. Make sure to have an iCloud account signed in on your phone and computer. Also make sure to have iCloud Drive enabled.
-2. Open the Taskchamp app on your phone. This will create a folder in iCloud Drive called `taskchamp`, this is where your tasks database file while live.
+2. Open the Taskchamp app on your phone. This will create a folder in iCloud Drive called `taskchamp`, this is where your tasks database file will live.
 
 > Sometimes it may take some time for the folder to appear on the finder and files app, but you can access it via terminal.
 
