@@ -19,7 +19,8 @@ To install Taskchamp, download the latest release from the App Store.
 To setup Taskchamp with Taskwarrior, follow these steps:
 
 1. Make sure to have an iCloud account signed in on your phone and computer. Also make sure to have iCloud Drive enabled.
-2. Open the Taskchamp app on your phone. This will create a folder in iCloud Drive called `taskchamp`, this is where your tasks database file will live.
+> Ensure that you disable "Optimize Mac Storage" in iCloud Drive's settings 
+3. Open the Taskchamp app on your phone. This will create a folder in iCloud Drive called `taskchamp`, this is where your tasks database file will live.
 
 > Sometimes it may take some time for the folder to appear on the finder and files app, but you can access it via terminal.
 
@@ -34,7 +35,7 @@ data.location=~/Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task
 - If you want to use an existing taskwarrior database, you can copy your existing `taskchampion.sqlite3` file to the `~/Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task
 ` folder in iCloud Drive, replacing the existing file. You can do the same for your `hooks` folder if you have any hooks you want to use.
 
-4. iCloud syncing has proven to be less reliable when syncing changes from your iPhone to your computer (works flawless the other way aroung). For this, a shell script has been created to sync the database, ensuring tasks edited on your phone are accurately reflected on your computer.
+4. iCloud syncing has proven to be less reliable when syncing changes from your iPhone to your computer (works flawlessly the other way around). For this, a shell script has been created to sync the database, ensuring tasks edited on your phone are accurately reflected on your computer.
 
 > I recommend running this script whenever you have made changes on your phone that you want to see on your computer.
 
