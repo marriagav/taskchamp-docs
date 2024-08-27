@@ -1,5 +1,7 @@
 # Taskchamp
 
+> Taskchamp is currently on open beta! To become test it tap on the TestFlight link here: https://testflight.apple.com/join/K4wrKrzg
+
 Use [Taskwarrior](https://taskwarrior.org/), a simple command line interface to manage your tasks from you computer, and a beautiful native app to manage them from your phone.
 
 ## Installation
