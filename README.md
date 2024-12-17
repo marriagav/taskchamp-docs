@@ -1,16 +1,16 @@
 # Taskchamp
 
-> Taskchamp is currently on open beta! To become a tester tap on the TestFlight link here: https://testflight.apple.com/join/K4wrKrzg
-
 Use [Taskwarrior](https://taskwarrior.org/), a simple command line interface to manage your tasks from you computer, and a beautiful native app to manage them from your phone.
 
 ## Installation
+
+To install Taskchamp, download the latest [release from the App Store](https://apps.apple.com/us/app/taskchamp-tasks-for-devs/id6633442700).
 
 Taskchamp can work as a standalone iOS app, but it's recommended to use it with Taskwarrior. To install Taskwarrior, follow the instructions [here](https://taskwarrior.org/download/).
 
 > Taskchamp is only compatible with Taskwarrior 3.0.0 or later.
 
-To install Taskchamp, download the latest release from the App Store.
+> To become a tester tap on the TestFlight link here: https://testflight.apple.com/join/K4wrKrzg
 
 ## Setup with Taskwarrior
 
