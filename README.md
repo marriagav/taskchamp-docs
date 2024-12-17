@@ -11,8 +11,6 @@ Taskchamp can work as a standalone iOS app, but it's recommended to use it with 
 
 > Taskchamp is only compatible with Taskwarrior 3.0.0 or later.
 
-> To become a tester tap on the TestFlight link here: https://testflight.apple.com/join/K4wrKrzg
-
 ## Setup with Taskwarrior
 
 > Taskchamp uses iCloud Drive to sync tasks between your computer and your phone. This is described on the Taskwarrior docs [here](https://man.archlinux.org/man/extra/task/task-sync.5.en#ALTERNATIVE:_FILE_SHARING_SERVICES).
