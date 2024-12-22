@@ -81,6 +81,8 @@ Taskchamp is able to create Obsidian notes for your tasks. Learn more about Obsi
 
 The way this works is very simple, a new annotation will be created on the task, which contains the title of the task (with some parsing, like removing whitespaces)
 
+> Note: if you delete the task note or modify its title, you will need to manually update the annotation on the task so that Taskchamp is aware that that note not longer exists or it changed name.
+
 ### Interact with Obsidian notes from Taskwarrior
 If you want to be able to replicate this functionality for Taskwarrior on MacOS, you can use a bash script that I have created:
 
