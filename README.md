@@ -67,3 +67,64 @@ cat "${task_file}" > /dev/null
 6. Run the script whenever you want to sync your tasks. You can also create a cron job to run the script every few minutes. Another option is to create an alias for the script, so you can run it from the command line easily.
 
 7. Your tasks should now be synced between your computer and your phone. You can add tasks from the command line using Taskwarrior, and they will appear on Taskchamp.
+
+## Obsidian integration
+
+Taskchamp is able to create Obsidian notes for your tasks. Learn more about Obsidian [here](https://obsidian.md/). In order to set Taskchamp to work with Obsidian follow the following steps:
+1. Download the Obsidian App
+2. Create an Obsidian vault
+3. Optional: create a sub-directory for your tasks inside your vault. Otherwise, you can use the base directory of the vault to store your task notes.
+4. Create a new task using taskchamp
+5. Navigate to the newly created task and press on the "Create obsidian note" button on the bottom of the screen.
+6. The first time you do this, you will be prompted for the vault name and sub-directory created earlier. You can always modify these from the settings menu in the Taskchamp app.
+7. Once you enter the fields, press the Obsidian note button again, this will take your task note in Obsidian.
+
+The way this works is very simple, a new annotation will be created on the task, which contains the title of the task (with some parsing, like removing whitespaces)
+
+### Interact with Obsidian notes from Taskwarrior
+If you want to be able to replicate this functionality for Taskwarrior on MacOS, you can use a bash script that I have created:
+
+```bash
+#!/bin/zsh
+
+if [[ $1 =~ ^[0-9]+$ ]]; then
+  # $1 is a task ID
+  task_id=$1
+else
+  # $1 is a task name
+  task_id=$(task -g "$1" | awk 'NR==4 {print $1}')
+  echo "Task ID: $task_id"
+fi
+
+task=$(task $task_id)
+
+vault_name="<YOUT_VAULT_NAME>" 
+sub_dir="<SUBDIRECTORY_FOR_YOUR_TASK_NOTES>"
+
+task_note=$(echo "$task" | awk '/task-note:/ {print $4}')
+
+if [ -n "$task_note" ]; then
+   open "obsidian://open?vault=$vault_name&file=$sub_dir/$task_note"
+   exit 0
+fi
+
+description=$(echo "$task" | awk '/^Description/ {print $2}')
+
+if [ -z "$description" ]; then
+  echo "Error: Task not found"
+  exit 1 
+fi
+
+file_name="task-$description"
+
+task $task_id annotate "task-note: "$file_name
+
+open "obsidian://new?vault=$vault_name&file=$sub_dir/$file_name"
+
+```
+
+> Important: Update the `<YOUT_VAULT_NAME>` and `<SUBDIRECTORY_FOR_YOUR_TASK_NOTES>` values before using the script.
+
+Save this script to a file, for example `task-note.sh`, and make it executable by running `chmod +x task-note.sh`.
+Run the script by passing the task number as a command. 
+For example: `task-note.sh 4` will create or open the task note for task with Taskwarrior ID 4
