@@ -42,7 +42,7 @@ data.location=~/Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task
 ```
 
 - This will tell Taskwarrior to use the `taskchamp` folder in iCloud Drive to store the tasks database file.
-- This path might be a bit different depending on your system (Linux), but you can find the correct path by navigating to the `taskchamp` folder in iCloud Drive and copying the path from the finder, or accessing the directory from uour terminal. In MacOS this is `Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task`.
+- This path might be a bit different depending on your system (Linux), but you can find the correct path by navigating to the `taskchamp` folder in iCloud Drive and copying the path from the finder, or accessing the directory from your terminal. In MacOS this is `Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task`.
 - If you want to use an existing taskwarrior database, you can copy your existing `taskchampion.sqlite3` file to the `~/Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task
 ` folder in iCloud Drive, replacing the existing file. You can do the same for your `hooks` folder if you have any hooks you want to use.
 
@@ -50,7 +50,7 @@ data.location=~/Library/Mobile Documents/iCloud~com~mav~taskchamp/Documents/task
 
 > I recommend running this script whenever you have made changes on your phone that you want to see on your computer.
 
-The script is very simple:
+The script is very simple, essentially all ot does is reads the file a couple of times (which tells iCloud to sync it):
 
 ```bash
 #!/bin/bash
