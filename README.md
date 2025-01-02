@@ -11,15 +11,15 @@ Taskchamp can work as a standalone iOS app, but it's recommended to use it with 
 
 > Taskchamp is only compatible with Taskwarrior 3.0.0 or later.
 
-> [!IMPORTANT]:
+> [!IMPORTANT]
 > Latest version of Taskwarrior breaks Taskchamp sync, for the moment please use Taskwarrior 3.1.0 until I fix this issue: https://github.com/marriagav/taskchamp-docs/issues/2
 
 ## Setup with Taskwarrior
 
 > Taskchamp uses iCloud Drive to sync tasks between your computer and your phone. This is described on the Taskwarrior docs [here](https://man.archlinux.org/man/extra/task/task-sync.5.en#ALTERNATIVE:_FILE_SHARING_SERVICES).
 
-> [!IMPORTANT]:
-> The following instructions are specific for macOS
+> [!IMPORTANT]
+> The following instructions are specific for macOS.
 > If you are using Linux, feel free to follow along but you might need to make some modifications.
 > Linux users must use the new [iCloud Drive support in rclone](https://github.com/rclone/rclone/pull/7717)
 
