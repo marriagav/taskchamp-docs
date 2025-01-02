@@ -22,7 +22,7 @@ Taskchamp can work as a standalone iOS app, but it's recommended to use it with 
 > The following instructions are specific for macOS.
 
 > [!NOTE] 
-> * For Linux Users *
+> *For Linux Users*
 > If you are using Linux, feel free to follow along but you might need to make some modifications.
 > Linux users must use the new [iCloud Drive support in rclone](https://github.com/rclone/rclone/pull/7717)
 
